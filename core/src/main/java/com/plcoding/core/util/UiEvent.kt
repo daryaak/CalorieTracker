@@ -1,4 +1,6 @@
 package com.plcoding.core.util
 
-class UiEvent {
+sealed class UiEvent {
+    data class Navigate(val route:String): UiEvent()
+    object NavigateUp: UiEvent()
 }
