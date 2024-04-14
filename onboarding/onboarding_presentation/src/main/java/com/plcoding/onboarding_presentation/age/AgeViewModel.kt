@@ -27,7 +27,7 @@ class AgeViewModel @Inject constructor(
     val uiEvent = _uiEvent.receiveAsFlow()
 
     fun onAgeEnter(age: String){
-        if(age.length<=3){
+        if(age.length<=2){
             this.age = filterOutDigits(age)
 
         }
